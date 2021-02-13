@@ -1,1 +1,1 @@
-# New Java project template
+# {{ cookiecutter.project }}

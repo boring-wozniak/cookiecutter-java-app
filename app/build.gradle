@@ -25,7 +25,7 @@ dependencies {
 
 application {
     // FIXME: causes a warning
-    mainClassName = 'bw.Application'
+    mainClassName = '{{ cookiecutter.package }}.Application'
 }
 
 tasks.named('test') {
