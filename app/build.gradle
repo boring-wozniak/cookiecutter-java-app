@@ -10,6 +10,9 @@ repositories {
 final LATEST = 'latest.release'
 
 dependencies {
+    implementation "org.slf4j:slf4j-api:$LATEST"
+    runtimeOnly "ch.qos.logback:logback-classic:$LATEST"
+
     testImplementation "org.junit.jupiter:junit-jupiter-api:$LATEST"
     testImplementation "org.mockito:mockito-core:$LATEST"
     testImplementation "org.assertj:assertj-core:$LATEST"
