@@ -1,1 +1,1 @@
-# new-java-project
+# New Java project template
