@@ -1,4 +1,5 @@
 {
     "project": "a-new-project",
-    "package": "bw"
+    "package": "bw",
+    "java_version": 17
 }

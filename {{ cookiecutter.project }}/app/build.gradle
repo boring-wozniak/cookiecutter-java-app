@@ -6,6 +6,12 @@ plugins {
     id 'io.freefair.lombok' version '6.4.1'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of({{ cookiecutter.java_version }})
+    }
+}
+
 repositories {
     mavenCentral()
 }
