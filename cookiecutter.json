@@ -1,5 +1,5 @@
 {
     "project": "a-new-project",
     "package": "bw",
-    "java_version": 17
+    "java_version": [17, 11]
 }
