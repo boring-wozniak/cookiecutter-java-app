@@ -32,7 +32,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-    // The default version has a bug
-    // https://github.com/spotbugs/spotbugs/issues/756
+spotbugs {
+    // The default version prints a warning
     toolVersion = '4.6.0'
 }
