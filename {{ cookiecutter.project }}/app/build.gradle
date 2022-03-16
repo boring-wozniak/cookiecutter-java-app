@@ -24,8 +24,7 @@ dependencies {
 }
 
 application {
-    // FIXME: causes a warning
-    mainClassName = '{{ cookiecutter.package }}.Application'
+    mainClass = '{{ cookiecutter.package }}.Application'
 }
 
 test {
