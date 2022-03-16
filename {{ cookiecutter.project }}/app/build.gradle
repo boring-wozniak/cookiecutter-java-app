@@ -31,8 +31,3 @@ application {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-spotbugs {
-    // The default version prints a warning
-    toolVersion = '4.6.0'
-}
