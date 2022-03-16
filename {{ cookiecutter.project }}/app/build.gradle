@@ -28,6 +28,6 @@ application {
     mainClassName = '{{ cookiecutter.package }}.Application'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
 }
