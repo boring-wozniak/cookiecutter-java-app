@@ -32,10 +32,6 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-lombok {
-    generateLombokConfig.enabled = false
-}
-
 spotbugs {
     // The default version has a bug
     // https://github.com/spotbugs/spotbugs/issues/756
