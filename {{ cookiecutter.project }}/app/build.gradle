@@ -31,9 +31,3 @@ application {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
-spotbugs {
-    // The default version has a bug
-    // https://github.com/spotbugs/spotbugs/issues/756
-    toolVersion = LATEST
-}
