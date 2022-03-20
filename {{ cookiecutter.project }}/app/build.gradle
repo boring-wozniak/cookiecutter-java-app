@@ -35,4 +35,8 @@ application {
 
 test {
     useJUnitPlatform()
+
+    systemProperty(
+        'junit.jupiter.displayname.generator.default',
+        'org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores')
 }
