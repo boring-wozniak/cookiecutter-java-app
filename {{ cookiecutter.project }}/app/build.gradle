@@ -42,4 +42,6 @@ test {
     systemProperty(
         'junit.jupiter.displayname.generator.default',
         'org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores')
+    systemProperty('junit.jupiter.execution.parallel.enabled', true)
+    systemProperty('junit.jupiter.execution.parallel.mode.default', 'concurrent')
 }
