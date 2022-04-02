@@ -37,6 +37,8 @@ application {
 test {
     useJUnitPlatform()
 
+    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+
     systemProperty(
         'junit.jupiter.displayname.generator.default',
         'org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores')
