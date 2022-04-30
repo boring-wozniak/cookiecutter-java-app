@@ -1,3 +1,5 @@
+import static java.lang.Runtime.runtime
+
 plugins {
     id 'application'
     id 'checkstyle'
@@ -37,7 +39,7 @@ application {
 test {
     useJUnitPlatform()
 
-    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    maxParallelForks = runtime.availableProcessors().intdiv(2) ?: 1
 
     systemProperty(
         'junit.jupiter.displayname.generator.default',
