@@ -2,6 +2,7 @@ import static java.lang.Runtime.runtime
 
 plugins {
     id 'application'
+    id 'jacoco'
     id 'pmd'
     id 'com.github.johnrengelman.shadow' version 'latest.release'
     id 'io.freefair.lombok' version 'latest.release'
@@ -54,3 +55,5 @@ test {
     systemProperty('jqwik.seeds.whenfixed', 'WARN')
     systemProperty('jqwik.reporting.usejunitplatform', true)
 }
+
+check.dependsOn(jacocoTestReport)
