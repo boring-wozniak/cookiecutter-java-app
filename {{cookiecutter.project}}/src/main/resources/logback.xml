@@ -11,6 +11,6 @@
         <appender-ref ref="STDOUT"/>
     </root>
 
-    <logger name="{{ cookiecutter.package }}" level="${APP_LOG_LEVEL:-${ROOT_LOG_LEVEL}}"/>
+    <logger name="{{cookiecutter.package}}" level="${APP_LOG_LEVEL:-${ROOT_LOG_LEVEL}}"/>
 
 </configuration>

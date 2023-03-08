@@ -38,7 +38,7 @@ dependencies {
 }
 
 application {
-    mainClass = '{{ cookiecutter.package }}.Application'
+    mainClass = '{{cookiecutter.package}}.Application'
 }
 
 test {

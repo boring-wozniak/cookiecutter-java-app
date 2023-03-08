@@ -1,4 +1,4 @@
-package {{ cookiecutter.package }};
+package {{cookiecutter.package}};
 
 import org.junit.jupiter.api.Test;
 

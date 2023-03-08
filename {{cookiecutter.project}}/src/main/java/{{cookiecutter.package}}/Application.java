@@ -1,4 +1,4 @@
-package {{ cookiecutter.package }};
+package {{cookiecutter.package}};
 
 import lombok.extern.slf4j.Slf4j;
 
