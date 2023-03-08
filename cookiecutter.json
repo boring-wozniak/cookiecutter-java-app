@@ -1,5 +1,5 @@
 {
     "project": "a-new-project",
     "package": "bw",
-    "package-dirs": "{{cookiecutter.package|replace('.','a')}}"
+    "package-dirs": "{{cookiecutter.package|replace('.','/')}}"
 }
