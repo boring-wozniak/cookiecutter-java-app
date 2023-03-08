@@ -1,14 +1,17 @@
 import static java.lang.Runtime.runtime
+import static org.gradle.jvm.toolchain.JvmVendorSpec.GRAAL_VM
 
 plugins {
     id 'application'
     id 'pmd'
     id 'io.freefair.lombok' version 'latest.release'
+    id 'org.graalvm.buildtools.native' version 'latest.release'
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of({{ cookiecutter.java_version }})
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = GRAAL_VM
     }
 }
 
