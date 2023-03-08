@@ -3,9 +3,9 @@ import static java.lang.Runtime.runtime
 plugins {
     id 'application'
     id 'checkstyle'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'com.github.johnrengelman.shadow' version '8.1.0'
     id 'com.github.spotbugs' version '5.0.13'
-    id 'io.freefair.lombok' version '6.6.1'
+    id 'io.freefair.lombok' version '6.6.3'
 }
 
 java {
@@ -50,8 +50,4 @@ test {
         'org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores')
     systemProperty('junit.jupiter.execution.parallel.enabled', true)
     systemProperty('junit.jupiter.execution.parallel.mode.default', 'concurrent')
-}
-
-lombok {
-    version = LATEST
 }
