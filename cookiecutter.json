@@ -1,4 +1,5 @@
 {
     "project": "a-new-project",
-    "package": "bw"
+    "package": "bw",
+    "package-dirs": "{{cookiecutter.package|replace('.','/')}}"
 }
