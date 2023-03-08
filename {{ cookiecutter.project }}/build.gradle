@@ -30,8 +30,8 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:$LATEST"
     testImplementation "org.junit.jupiter:junit-jupiter-params:$LATEST"
-    testImplementation "org.mockito:mockito-core:$LATEST"
     testImplementation "org.assertj:assertj-core:$LATEST"
+    testImplementation "org.mockito:mockito-core:$LATEST"
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
