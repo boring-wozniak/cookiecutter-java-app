@@ -26,12 +26,16 @@ final LATEST = 'latest.release'
 dependencies {
     implementation "org.slf4j:slf4j-api:$LATEST"
     runtimeOnly "ch.qos.logback:logback-classic:$LATEST"
-
+    {% if cookiecutter.jansi == "yes" %}
+    implementation "org.fusesource.jansi:jansi:$LATEST"
+    {% endif %}
     testImplementation "org.junit.jupiter:junit-jupiter-api:$LATEST"
     testImplementation "org.junit.jupiter:junit-jupiter-params:$LATEST"
     testImplementation "org.assertj:assertj-core:$LATEST"
     testImplementation "org.mockito:mockito-core:$LATEST"
+    {%- if cookiecutter.jqwik == "yes" %}
     testImplementation "net.jqwik:jqwik:$LATEST"
+    {%- endif %}
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
@@ -50,9 +54,11 @@ test {
         'org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores')
     systemProperty('junit.jupiter.execution.parallel.enabled', true)
     systemProperty('junit.jupiter.execution.parallel.mode.default', 'concurrent')
+    {%- if cookiecutter.jqwik == "yes" %}
     systemProperty('jqwik.database', "${buildDir}/jqwik.db")
     systemProperty('jqwik.seeds.whenfixed', 'WARN')
     systemProperty('jqwik.reporting.usejunitplatform', true)
+    {%- endif %}
 }
 
 check.dependsOn(jacocoTestReport)
