@@ -4,6 +4,7 @@ plugins {
     id 'application'
     id 'jacoco'
     id 'com.github.johnrengelman.shadow' version 'latest.release'
+    id 'com.github.spotbugs' version 'latest.release'
     id 'io.freefair.lombok' version 'latest.release'
 }
 
