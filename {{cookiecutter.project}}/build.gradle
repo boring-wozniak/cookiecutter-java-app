@@ -3,9 +3,9 @@ import static java.lang.Runtime.runtime
 plugins {
     id 'application'
     id 'jacoco'
-    id 'com.github.johnrengelman.shadow' version 'latest.release'
-    id 'com.github.spotbugs' version 'latest.release'
-    id 'io.freefair.lombok' version 'latest.release'
+    alias(libs.plugins.shadow)
+    alias(libs.plugins.spotbugs)
+    alias(libs.plugins.lombok)
 }
 
 java {
@@ -25,17 +25,17 @@ repositories {
 final LATEST = 'latest.release'
 
 dependencies {
-    implementation "org.slf4j:slf4j-api:$LATEST"
-    runtimeOnly "ch.qos.logback:logback-classic:$LATEST"
-    {% if cookiecutter.jansi == "yes" %}
-    implementation "org.fusesource.jansi:jansi:$LATEST"
-    {% endif %}
+    implementation(libs.slf4j)
+    runtimeOnly(libs.logback)
+    {%- if cookiecutter.jansi == "yes" %}
+    implementation(libs.jansi)
+    {%- endif %}
     testImplementation "org.junit.jupiter:junit-jupiter-api:$LATEST"
     testImplementation "org.junit.jupiter:junit-jupiter-params:$LATEST"
-    testImplementation "org.assertj:assertj-core:$LATEST"
-    testImplementation "org.mockito:mockito-core:$LATEST"
+    testImplementation(libs.assertj)
+    testImplementation(libs.mockito)
     {%- if cookiecutter.jqwik == "yes" %}
-    testImplementation "net.jqwik:jqwik:$LATEST"
+    testImplementation(libs.jqwik)
     {%- endif %}
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'

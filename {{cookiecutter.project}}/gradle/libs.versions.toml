@@ -1,0 +1,41 @@
+[libraries.slf4j]
+group = 'org.slf4j'
+name = 'slf4j-api'
+version = 'latest.release'
+
+[libraries.logback]
+group = 'ch.qos.logback'
+name = 'logback-classic'
+version = 'latest.release'
+{% if cookiecutter.jansi == "yes" %}
+[libraries.jansi]
+group = 'org.fusesource.jansi'
+name = 'jansi'
+version = 'latest.release'
+{% endif %}
+[libraries.assertj]
+group = 'org.assertj'
+name = 'assertj-core'
+version = 'latest.release'
+
+[libraries.mockito]
+group = 'org.mockito'
+name = 'mockito-core'
+version = 'latest.release'
+{% if cookiecutter.jqwik == "yes" %}
+[libraries.jqwik]
+group = 'net.jqwik'
+name = 'jqwik'
+version = 'latest.release'
+{% endif %}
+[plugins.shadow]
+id = 'com.github.johnrengelman.shadow'
+version = 'latest.release'
+
+[plugins.spotbugs]
+id = 'com.github.spotbugs'
+version = 'latest.release'
+
+[plugins.lombok]
+id = 'io.freefair.lombok'
+version = 'latest.release'
