@@ -1,0 +1,27 @@
+name: Build
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - ReadMe.md
+      - .gitignore
+      - .gitattributes
+concurrency:
+  group: {%raw%}${{github.workflow}}-${{github.ref}}{%endraw%}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - name: Clone the repo
+        uses: actions/checkout@v3
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          dependency-graph: generate-and-submit
+      - name: Build
+        run: ./gradlew build
