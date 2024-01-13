@@ -61,5 +61,5 @@ java {
 }
 
 application {
-    mainClass = "bw.App"
+    mainClass = "{{cookiecutter.package}}.App"
 }
