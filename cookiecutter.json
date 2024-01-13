@@ -1,7 +1,5 @@
 {
-    "project": "a-new-project",
+    "project": "an-app",
     "package": "bw",
-    "package_dirs": "{{cookiecutter.package|replace('.','/')}}",
-    "jqwik": ["yes","no"],
-    "jansi": ["yes","no"]
+    "package_dirs": "{{cookiecutter.package|replace('.','/')}}"
 }
