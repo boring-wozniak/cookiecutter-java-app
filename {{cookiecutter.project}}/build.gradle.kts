@@ -2,6 +2,8 @@
 
 import org.gradle.api.attributes.TestSuiteType.FUNCTIONAL_TEST
 
+group = "{{cookiecutter.group}}"
+version = "{{cookiecutter.version}}"
 
 plugins {
     application
