@@ -7,7 +7,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 
 final class App {
 
-    private static final Logger LOG = getLogger(lookup().lookupClass());
+    private static final Logger log = getLogger(lookup().lookupClass());
 
     String greeting() {
         return "Hello World!";
@@ -15,7 +15,7 @@ final class App {
 
     public static void main(String[] args) {
         final var app = new App();
-        LOG.info("The app says {}", app.greeting());
+        log.info("The app says {}", app.greeting());
     }
 
 }
