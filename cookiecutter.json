@@ -3,5 +3,6 @@
     "group": "io.github.boring-wozniak.{{cookiecutter.project}}",
     "package": "{{cookiecutter.group|replace('-','')}}",
     "version": "0.0.1-SNAPSHOT",
-    "package_dirs": "{{cookiecutter.package|replace('.','/')}}"
+    "package_dirs": "{{cookiecutter.package|replace('.','/')}}",
+    "java_version": ["17", "21"]
 }

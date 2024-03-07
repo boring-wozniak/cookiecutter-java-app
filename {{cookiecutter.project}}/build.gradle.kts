@@ -58,7 +58,7 @@ tasks.check {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of({{cookiecutter.java_version}})
     }
 }
 
