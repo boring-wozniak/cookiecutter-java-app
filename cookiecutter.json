@@ -4,5 +4,5 @@
     "package": "{{cookiecutter.group|replace('-','')}}",
     "version": "0.0.1-SNAPSHOT",
     "package_dirs": "{{cookiecutter.package|replace('.','/')}}",
-    "java_version": ["17", "21"]
+    "java_version": ["21", "17"]
 }
