@@ -27,16 +27,6 @@ testing {
                 implementation(libs.junit.params)
                 implementation(libs.assertj)
             }
-            targets {
-                all {
-                    testTask.configure {
-                        systemProperty(
-                            "junit.jupiter.displayname.generator.default",
-                            "org.junit.jupiter.api.DisplayNameGenerator\$ReplaceUnderscores"
-                        )
-                    }
-                }
-            }
         }
         val test by getting(JvmTestSuite::class) {
             dependencies {
