@@ -55,3 +55,8 @@ java {
 application {
     mainClass = "{{cookiecutter.package}}.App"
 }
+
+tasks.wrapper {
+    distributionType = ALL
+    gradleVersion = "latest"
+}
