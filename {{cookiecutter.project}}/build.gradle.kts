@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import org.gradle.api.tasks.wrapper.Wrapper.DistributionType.ALL
 import org.gradle.api.attributes.TestSuiteType.FUNCTIONAL_TEST
 
 group = "{{cookiecutter.group}}"
